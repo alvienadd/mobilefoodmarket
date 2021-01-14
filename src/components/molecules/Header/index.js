@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const Header = () => {
+const Header = ({title,subTitle}) => {
     return (
-        <View>
-            <Text style={styles.title}>Sign In</Text>
-            <Text>Find Your Best Ever Meal</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.subTitle}>{subTitle}</Text>
         </View>
     )
 }
@@ -13,9 +13,20 @@ const Header = () => {
 export default Header
 
 const styles = StyleSheet.create({
+    container:{
+        backgroundColor:'white',
+        paddingHorizontal:24,
+        paddingTop:30,
+        paddingBottom:24
+    },
     title:{
         fontSize:22,
         fontFamily:'Poppins-Medium',
         color:'#020202'
+    },
+    subTitle:{
+        fontSize:14,
+        fontFamily:'Poppins-Light',
+        color:'#BD92A3'
     }
 })
